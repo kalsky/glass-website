@@ -84,25 +84,26 @@ applications:
     debugging: 
       connection_protocol: SSH
 
-blueprints:
-  spec_version: 1
-  kind: blueprint
-  metadata:
-    description: >
-      glass-website
+blueprint:
+  glass-website:
+    spec_version: 1
+    kind: blueprint
+    metadata:
+      description: >
+        glass-website
+        
+    clouds: 
+      - Azure: westus2
       
-  clouds: 
-    - Azure: westus2
-    
-  inputs:
-  - PORT: 80
-  - AZURE_VM_SIZE: Standard_B1s
+    inputs:
+    - PORT: 80
+    - AZURE_VM_SIZE: Standard_B1s
 
-  applications:
-    - glass:
-        input_values:
-          - PORT: $PORT
-          - AZURE_VM_SIZE: $AZURE_VM_SIZE
+    applications:
+      - glass:
+          input_values:
+            - PORT: $PORT
+            - AZURE_VM_SIZE: $AZURE_VM_SIZE
 
-  debugging:
-    availability: on
+    debugging:
+      availability: on
