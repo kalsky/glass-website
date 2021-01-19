@@ -84,7 +84,7 @@ applications:
     debugging: 
       connection_protocol: SSH
 
-blueprint:
+blueprints:
   spec_version: 1
   kind: blueprint
   metadata:
