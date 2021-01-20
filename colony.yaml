@@ -75,7 +75,7 @@ applications:
       # To validate the installation, we wait to see that the ports are available
       healthcheck:
         wait_for_ports: ALL
-        timeout: 181
+        timeout: 180
 
     debugging: 
       connection_protocol: SSH
@@ -87,11 +87,10 @@ blueprint:
     metadata:
       description: >
         glass-website
-        
     clouds: 
       - Azure: westus2
       
-    inputs:
+    default_inputs: #basically hiding them from inputs
     - PORT: 80
     - AZURE_VM_SIZE: Standard_B1s
 
