@@ -90,9 +90,9 @@ blueprint:
     clouds: 
       - Azure: westus2
       
-    default_inputs: #basically hiding them from inputs
-    - PORT: 80
-    - AZURE_VM_SIZE: Standard_B1s
+    # default_inputs: #basically hiding them from inputs
+    # - PORT: 80
+    # - AZURE_VM_SIZE: Standard_B1s
 
     applications:
       - glass:
