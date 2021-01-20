@@ -97,8 +97,8 @@ blueprint:
     applications:
       - glass:
           input_values:
-            - PORT: $PORT
-            - AZURE_VM_SIZE: $AZURE_VM_SIZE
+            - PORT: 80
+            - AZURE_VM_SIZE: Standard_B1s
 
     debugging:
       availability: on
