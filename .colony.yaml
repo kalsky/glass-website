@@ -47,7 +47,7 @@ applications:
 
     inputs:
       - PORT: 80
-      - AZURE_VM_SIZE: Standard_B2s
+      - AZURE_VM_SIZE: Standard_B1s
 
     infrastructure:
       compute:
@@ -92,10 +92,6 @@ blueprint:
         glass-website
     clouds: 
       - Azure: westus2
-      
-    # default_inputs: #basically hiding them from inputs
-    # - PORT: 80
-    # - AZURE_VM_SIZE: Standard_B1s
 
     applications:
       - glass:
