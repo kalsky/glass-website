@@ -41,7 +41,7 @@ scripts:
     service nginx start
 
 applications:
-  website:
+  glass-app:
     spec_version: 1
     kind: application
 
@@ -94,7 +94,7 @@ blueprint:
       - Azure: westus2
 
     applications:
-      - glass:
+      - glass-app:
           input_values:
             - PORT: 80
             - AZURE_VM_SIZE: Standard_B1s
