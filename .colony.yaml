@@ -4,7 +4,7 @@ outputs:
   url: sandbox  # can be sandbox, target
 
 scripts:
-  init.sh: >
+  init.sh: |
     #!/bin/bash
     apt-get update
     apt install curl -y
@@ -35,7 +35,7 @@ scripts:
     }
     }
     EOF
-  start.sh: >
+  start.sh: |
     #!/bin/bash
     service nginx stop
     service nginx start
